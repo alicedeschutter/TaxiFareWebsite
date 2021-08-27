@@ -2,7 +2,6 @@ import streamlit as st
 import datetime
 import pandas as pd
 import requests
-import math
 
 st.markdown('''
 # Prediction of the NY Taxi Fare
@@ -43,6 +42,6 @@ if st.checkbox('Do you want to make a prediction?'):
     if st.button('Get Prediction'):
         # print is visible in the server output, not in the page
         print('button clicked!')
-        st.write(f"You're fare will be of {math.ceil(response['prediction'])} dollars!")
+        st.write(f"You're fare will be of {response['prediction']} dollars!")
     else:
         st.write('Click on the button to find out how much the fare will be!')
